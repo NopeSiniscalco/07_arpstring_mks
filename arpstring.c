@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
+#include <string.h>
 
 void print_array(int *a, int length)
 {
@@ -65,5 +66,25 @@ int main()
 
 	char *c = "StringTest";
 	printf("Length of string: %d\n", string_length(c));
+
+
+	char d[22];
+	strcpy(d,c);
+	printf("strcpy: [");
+	for (i = 0; i < 11; i++)
+		printf("%c ", d[i]);
+	printf("] \n\n");
+
+	strcat(d,c);
+	printf("strcat: [");
+	for (i = 0; i < 22; i++)
+		printf("%c ", d[i]);
+	printf("] \n\n");
+
+
+
+
+
+
 	return 0;
 }
