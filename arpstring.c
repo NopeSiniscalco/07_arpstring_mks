@@ -67,24 +67,24 @@ int main()
 	char *c = "StringTest";
 	printf("Length of string: %d\n", string_length(c));
 
-
 	char d[22];
-	strcpy(d,c);
+	strcpy(d, c);
 	printf("strcpy: [");
 	for (i = 0; i < 11; i++)
 		printf("%c ", d[i]);
 	printf("] \n\n");
 
-	strcat(d,c);
+	strcat(d, c);
 	printf("strcat: [");
 	for (i = 0; i < 22; i++)
 		printf("%c ", d[i]);
 	printf("] \n\n");
 
+	printf("Comparison of strings: %d\n", strcmp(c, d));
+	printf("Comparison of strings: %d\n", strcmp(c, c));
+	printf("Comparison of strings: %d\n\n", strcmp(d, c));
 
-
-
-
+	printf("Pointer to n in string c: %p\n", strchr(c, 'n'));
 
 	return 0;
 }
